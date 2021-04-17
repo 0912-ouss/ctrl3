@@ -1,0 +1,159 @@
+main .forni {
+    width: 100%;
+    height: 1600px;
+    padding-top: 70px;
+    display: flex;
+    justify-content: center;
+}
+
+main .forni ul {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    padding-right: 20px;
+}
+
+main .forni ul::-webkit-scrollbar {
+    width: 12px;
+}
+
+main .forni ul::-webkit-scrollbar-thumb {
+    background-color: #82ae46;
+}
+
+main .forni ul::-webkit-scrollbar-button {
+    height: 300px;
+    cursor: pointer;
+}
+
+main .forni ul li {
+    width: 100%;
+    height: 160px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    text-align: center;
+    border-bottom: 1px solid #82ae46;
+}
+
+main .forni ul li #p1 {
+    width: 5%;
+}
+
+main .forni ul li #p2 {
+    width: 20%;
+}
+
+main .forni ul li #p3 {
+    width: 25%;
+}
+
+main .forni ul li #p4 {
+    width: 10%;
+}
+
+main .forni ul li #p6 {
+    width: 20%;
+}
+
+main .forni ul li img {
+    width: 120px;
+    height: 120px;
+}
+
+main .forni ul li:first-child {
+    background-color: #82ae46;
+    color: #fff;
+    height: 80px;
+}
+
+main .forni ul li:first-child p {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.8;
+    text-transform: capitalize;
+}
+
+main .forni ul li p {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+main .forni ul li .action {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .forni ul li .action span {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: gray;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+main .forni ul li .action span button {
+    border: none;
+    background-color: #fff;
+    color: gray;
+    font-size: 10px;
+    outline: none;
+    width: 100%;
+    height: 100%;
+}
+
+main .forni ul li .action span:hover {
+    background-color: #82ae46;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+main .forni ul li .action span:hover button {
+    background-color: #82ae46;
+    border: none;
+    color: #fff;
+}
+
+main .forni ul li #p1 input {
+    width: 20px;
+    height: 20px;
+}
+
+main .forni ul li #p3 h1 {
+    line-height: 1.5;
+    font-weight: 400;
+    color: #000000;
+    text-transform: capitalize;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+main .forni ul li #p3 span {
+    font-size: 15px;
+    line-height: 1.8;
+    font-weight: 400;
+    color: gray;
+}
+
+main .forni ul li .p7 {
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: 400;
+    color: gray;
+}
