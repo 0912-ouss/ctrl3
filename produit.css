@@ -1,0 +1,656 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+header {
+    height: 120px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(54, 179, 179);
+    align-items: center;
+    justify-content: center;
+}
+
+header .header-top {
+    width: 100%;
+    height: 20%;
+    background-color: #82ae46;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .header-top ul {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .header-top ul li {
+    list-style: none;
+}
+
+header .header-top ul li p {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.8;
+    font-weight: 400;
+    font-size: 11px;
+}
+
+header nav {
+    width: 100%;
+    height: 80%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav .logo {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+header nav .logo p {
+    color: #82ae46;
+    font-weight: 800;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+header nav ul {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li p {
+    font-size: 11px;
+    font-weight: 400;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+main {
+    width: 100%;
+    min-height: 1200px;
+    max-height: 2200px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+main .main-title {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    background-image: url(images/bg_1.jpg);
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    ;
+    align-items: center;
+    justify-content: center;
+}
+
+main .main-title img {
+    width: 100%;
+    height: 500px;
+    position: absolute;
+}
+
+main .main-title p {
+    color: #fff;
+    z-index: 2;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: 300;
+}
+
+main .main-title span {
+    font-weight: 800;
+    color: #fff;
+    font-size: 30px;
+    font-family: "Poppins", Arial, sans-serif;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    z-index: 2;
+    margin-top: 5px;
+}
+
+main .main-title button {
+    width: 250px;
+    height: 60px;
+    background-color: #82ae46;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 20px;
+    text-transform: capitalize;
+    margin-top: 20px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: -8px 5px 20px 0 rgb(21 21 62 / 30%);
+}
+
+main .list {
+    width: 100%;
+    height: 1600px;
+    padding-top: 70px;
+    display: flex;
+    justify-content: center;
+}
+
+main .list ul {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    padding-right: 20px;
+}
+
+main .list ul::-webkit-scrollbar {
+    width: 12px;
+}
+
+main .list ul::-webkit-scrollbar-thumb {
+    background-color: #82ae46;
+}
+
+main .list ul::-webkit-scrollbar-button {
+    height: 300px;
+    cursor: pointer;
+}
+
+main .list ul li {
+    width: 100%;
+    height: 160px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    text-align: center;
+    border-bottom: 1px solid #82ae46;
+}
+
+main .list ul li #p1 {
+    width: 10%;
+}
+
+main .list ul li #p2 {
+    width: 10%;
+}
+
+main .list ul li #p3 {
+    width: 25%;
+}
+
+main .list ul li #p4 {
+    width: 5%;
+}
+
+main .list ul li #p5 {
+    width: 15%;
+}
+
+main .list ul li #p6 {
+    width: 5%;
+}
+
+main .list ul li img {
+    width: 120px;
+    height: 120px;
+}
+
+main .list ul li:first-child {
+    background-color: #82ae46;
+    color: #fff;
+    height: 80px;
+}
+
+main .list ul li:first-child p {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.8;
+    text-transform: capitalize;
+}
+
+main .list ul li p {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+main .list ul li .action {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .list ul li .action span {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: gray;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+main .list ul li .action span button {
+    border: none;
+    background-color: #fff;
+    color: gray;
+    font-size: 10px;
+    outline: none;
+    width: 100%;
+    height: 100%;
+}
+
+main .list ul li .action span:hover {
+    background-color: #82ae46;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+main .list ul li .action span:hover button {
+    background-color: #82ae46;
+    border: none;
+    color: #fff;
+}
+
+main .list ul li #p1 input {
+    width: 20px;
+    height: 20px;
+}
+
+main .list ul li #p3 h1 {
+    line-height: 1.5;
+    font-weight: 400;
+    color: #000000;
+    text-transform: capitalize;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+main .list ul li #p3 span {
+    font-size: 15px;
+    line-height: 1.8;
+    font-weight: 400;
+    color: gray;
+}
+
+main .list ul li .p7 {
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: 400;
+    color: gray;
+}
+
+main .list ul li #p5 input {
+    width: 100%;
+    height: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 15px;
+    outline: #82ae46;
+}
+
+main .list ul li #p5 input:focus {
+    border: 1px solid #82ae46;
+}
+
+main .order {
+    width: 80%;
+    height: 170px;
+    background-color: #82ae46;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.btn {
+    width: 250px;
+    height: 60px;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    color: #82ae46;
+    font-size: 20px;
+    text-transform: capitalize;
+    margin-top: 20px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: -8px 5px 20px 0 rgb(21 21 62 / 30%);
+}
+
+.btn:hover {
+    background-color: #e4ffc2;
+    border-radius: 7px;
+}
+
+main .order .btn {
+    margin-right: 20px;
+}
+
+
+/**/
+
+main .single {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    padding: 0px 10%;
+    justify-content: center;
+    align-items: center;
+}
+
+main .single .left {
+    width: 40%;
+    height: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .single .left button {
+    color: #fff;
+    margin-top: 20px;
+    width: 200px;
+    border-radius: 35px;
+}
+
+main .single .left img {
+    width: 80%;
+    height: 60%;
+    box-shadow: -8px 5px 20px 0 rgb(21 21 62 / 30%);
+}
+
+main .single .right {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    padding-left: 100px;
+}
+
+main .single .right input {
+    width: 500px;
+    height: 60px;
+    padding-left: 10px 20px;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000000;
+    font-family: "Poppins", Arial, sans-serif;
+    background-color: #Fff;
+    border: none;
+    text-transform: capitalize;
+    outline: none;
+}
+
+main .single .right input::placeholder {
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000000;
+    font-family: "Poppins", Arial, sans-serif;
+    background-color: #Fff;
+    border: none;
+    text-transform: capitalize;
+    outline: none;
+}
+
+main .single .right .rating {
+    width: 350px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+main .single .right .rating p {
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    text-transform: capitalize;
+}
+
+main .single .right .rating .v {
+    color: #82ae46;
+}
+
+main .single .right .rating p span {
+    color: gray;
+}
+
+main .single .right #desc {
+    margin-top: 20px;
+    padding-left: 10px 20px;
+    font-size: 17px;
+    min-width: 500px;
+    max-width: 500px;
+    min-height: 230px;
+    max-height: 230px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000000;
+    font-family: "Poppins", Arial, sans-serif;
+    background-color: #Fff;
+    border: none;
+    text-transform: capitalize;
+    outline: none;
+}
+
+main .single .right .qt {
+    width: 400px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .single .right .qt p {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border: 1px solid #82ae46;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    color: #cccccc;
+}
+
+main .single .right .qt p:hover {
+    background-color: #82ae46;
+    color: #fff;
+    cursor: pointer;
+}
+
+main .single .right .qt input {
+    width: 200px;
+    text-align: center;
+    border: 1px solid #82ae46;
+    font-size: 18px;
+}
+
+main .single .right .qt input::placeholder {
+    color: #a7a7a7;
+    font-size: 18px;
+}
+
+main .single .right #stock {
+    color: rgb(128, 128, 128);
+    margin-bottom: 1rem;
+    font-size: 17px;
+    line-height: 1.8;
+    font-weight: 600;
+}
+
+main .single .right button {
+    background-color: #000000;
+    color: #fff;
+    width: 170px;
+    border-radius: 25px;
+    height: 40px;
+}
+
+main .single .right .search {
+    margin-bottom: 20px;
+}
+
+main .single .right select {
+    width: 300px;
+    height: 60px;
+    text-align: center;
+    padding-left: 20px;
+    font-size: 17px;
+    border: 1px solid #000000;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+main .single .right #search-btn {
+    width: 100px;
+    height: 61px;
+    border-radius: 0;
+    margin-left: -7px;
+    margin-top: 20px;
+    background-color: #000000;
+    outline: none;
+    border: none;
+}
+
+main .single .right #search-btn:hover {
+    cursor: pointer;
+}
+
+#save {
+    background-color: #000000;
+    height: 70px;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+#save:hover {
+    cursor: pointer;
+}
+
+
+/**/
+
+footer {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    background-color: #f7f6f2;
+    margin-top: 100px;
+    padding: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer ul {
+    width: 17%;
+    height: 300px;
+    padding: 20px;
+}
+
+footer ul li {
+    list-style: none;
+}
+
+footer ul li p {
+    line-height: 1.5;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+footer ul li:first-child p {
+    line-height: 1.5;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-left: 0;
+}
+
+footer .social {
+    width: 250px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .social span {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(236, 236, 236);
+}
+
+footer .social span i {
+    font-size: 20px;
+}
+
+footer .text {
+    position: absolute;
+    bottom: 50px;
+    left: 35%;
+}
