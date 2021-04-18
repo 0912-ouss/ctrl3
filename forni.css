@@ -157,3 +157,46 @@ main .forni ul li .p7 {
     font-weight: 400;
     color: gray;
 }
+/*---------*/
+#btn-save{
+    background-color: #007AFF;
+    border: none;
+    color: #fff;
+    transition: all 0.2s;
+    height: 40px;
+    text-transform: capitalize;
+    width: 300px;
+    font-weight: 600;
+    font-size: 16px;
+    
+}
+#btn-save:hover{
+    background-color: #0047ab;
+    cursor: pointer;
+}
+#select-user{
+    height: 30px;
+    background-color: #efeff4;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    padding: 7px 0 5px 7px;
+}
+#select-search{
+    position: absolute;
+    z-index: 3;
+    background-color: #007AFF;
+    border: none;
+    color: #fff;
+    transition: all 0.2s;
+    height: 30px;
+    text-transform: capitalize;
+    right: 0px;
+    width: 35px;
+  
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+}
