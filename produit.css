@@ -205,10 +205,12 @@ main .list ul li #p1 {
 
 main .list ul li #p2 {
     width: 10%;
+
 }
 
 main .list ul li #p3 {
     width: 25%;
+    
 }
 
 main .list ul li #p4 {
@@ -221,6 +223,39 @@ main .list ul li #p5 {
 
 main .list ul li #p6 {
     width: 5%;
+}
+main .list ul li #p8 {
+    width: 5%;
+}
+main .list ul li #p11 {
+    width: 10%;
+    
+
+}
+
+main .list ul li #p22 {
+    width: 15%;
+
+}
+
+main .list ul li #p33 {
+    width: 10%;
+    
+}
+
+main .list ul li #p44 {
+    width: 10%;
+}
+
+main .list ul li #p55 {
+    width: 10%;
+}
+
+main .list ul li #p66 {
+    width: 5%;
+}
+main .list ul li #p88 {
+    width: 10%;
 }
 
 main .list ul li img {
@@ -298,7 +333,7 @@ main .list ul li #p1 input {
     height: 20px;
 }
 
-main .list ul li #p3 h1 {
+main .list ul li #p3 h1,main .list ul li #p33 h1 {
     line-height: 1.5;
     font-weight: 400;
     color: #000000;
@@ -342,6 +377,23 @@ main .order {
     justify-content: flex-end;
     align-items: center;
     padding-right: 20px;
+}
+main .order #msg {
+    font-size: 20px;
+    text-transform: capitalize;
+    margin-right: 18px;
+    color: #fff;
+    font-weight: 500;
+}
+main .order #total {
+    font-size: 20px;
+    text-transform: capitalize;
+    margin-right: 18px;
+    color: #82ae46;
+    font-weight: 500;
+    background-color: #fff;
+    padding: 10px;
+    letter-spacing: 1px;
 }
 
 .btn {
