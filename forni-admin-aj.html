@@ -8,6 +8,7 @@
     <title>Add Fornisseurs</title>
     <link rel="stylesheet" href="all.css">
     <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="forni.css">
 </head>
 
 <body id="bg1">
@@ -29,7 +30,7 @@
         <div class="form-wrapper">
             <h1 class="form-title">Add Fornisseur</h1>
 
-            <form action="">
+            <form method="POST">
                 <div class="form-group">
                     <label for="username">Username</label>
                     <input type="text" name="username" id="username" class="w-100" autofocus value="">
@@ -60,7 +61,7 @@
 
 
                 <div class="form-group mb-0">
-                    <input type="submit" value="Create fornisseur" class="w-100" id="submit">
+                    <button id="btn-save" name="add">save</button>
                 </div>
             </form>
 
@@ -70,6 +71,33 @@
     </div>
     <!-- end wrapper -->
     <script src="login.js"></script>
+    <?php
+   session_start();
+   include("cnx.php");
+   //SignUp code
+   if(isset($_POST["add"]))
+    {
+        
+		$C=0;
+		$nom=$_POST["username"];$email=$_POST["email"];$psw=$_POST["password"];
+        $Tel=$_POST["Tel"];$Adresse=$_POST["Adresse"];
+      
+		$dr=ExecuteReader($cnx,"select * from fournisseur WHERE Email='$email' and Psw='$psw'");
+    
+		while($cnt=$dr->fetch()) { $C++; } $dr->closeCursor();
+		if($C>=1)
+		{
+			echo("<script>alert('Enter an other Email');</script>");
+		}
+		else
+		{
+            if(!empty($nom)&&!empty($email)&&!empty($psw)&& !empty($Tel) && !empty($Adresse))
+            {
+			    ExecuteNonQuery($cnx,"insert into fournisseur values('','$nom','$Tel','$email','$psw','$Adresse')");
+            }
+		}
+	}
+    ?>
 </body>
 
 </html>
