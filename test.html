@@ -1,0 +1,41 @@
+<head> 
+    <meta charset="UTF-8">
+    <title>Cálculo IMC</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  </head>
+  <body>
+    <form class="container" id="formulario">
+      <div class="col-md-5">
+        <fieldset class="form-group">
+          <legend>Cálculo IMC</legend>
+          <label for="kilos">Kilos:</label>
+          <input type="text" name="kilos" class="form-control" />
+          
+          <label for="metros">Metros:</label>
+          <input type="text" name="metros" class="form-control" />
+          
+          <label for="centimetros">Centímetros:</label>
+          <input type="text" name="centimetros" class="form-control" />
+          
+          <label for="imc">IMC:</label>
+          <input type="text" name="imc" class="form-control" disabled="disabled" />
+          
+          <a href="#" onclick="calcularIMC();">Calcular</a>
+        </fieldset>
+      </div>
+    </form>
+    <script>
+        function calcularIMC(){
+  var formulario = document.getElementById("formulario");  
+  
+  var kilos = +formulario.kilos.value;
+  var metros = +formulario.metros.value;
+  var centimetros = +formulario.centimetros.value;
+  
+  var altura = (metros * 100 + centimetros)/100;
+  var imc = kilos / (altura * altura);
+  
+  formulario.imc.value = imc.toFixed(2);
+}
+    </script>
+  </body>
