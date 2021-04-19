@@ -18,11 +18,15 @@ body {
 
 #bg1 {
     background: linear-gradient(rgba(26, 26, 26, 0.2), rgba(26, 26, 26, 0.4)), url(images/bg_2.jpg) no-repeat;
+    background-size: cover;
+    margin: 0;
 }
 
 #bg3 {
     background: linear-gradient(rgba(26, 26, 26, 0.2), rgba(26, 26, 26, 0.4)), url(images/bg_1.jpg) no-repeat;
     background-position: bottom;
+    background-size: cover;
+    margin: 0;
 }
 
 a {
@@ -124,10 +128,18 @@ span.bar:last-child {
 
 #bg2 {
     background: linear-gradient(rgba(26, 26, 26, 0.2), rgba(26, 26, 26, 0.2)), url(images/category-2.jpg) no-repeat center center;
+    background-size: cover;
+    border-radius: 10px 0 0 10px;
+    flex-basis: 50%;
+    height: 100%;
 }
 
 #bg4 {
     background: linear-gradient(rgba(26, 26, 26, 0.2), rgba(26, 26, 26, 0.2)), url(images/image_3.jpg) no-repeat center center;
+    background-size: cover;
+    border-radius: 10px 0 0 10px;
+    flex-basis: 50%;
+    height: 100%;
 }
 
 .quote-wrapper blockquote {
