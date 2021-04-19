@@ -46,7 +46,7 @@
             <p>home cart</p>
             <span> my cart</span>
         </div>
-        <form class="list" id="list">
+        <form class="list">
             <ul>
                 <li>
                     <p id="p1">select</p>
@@ -63,9 +63,9 @@
                         <h1>product name</h1>
                         <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, deserunt?</span>
                     </div>
-                    <p id="prix" class="p7" name="ouss">29.00</p>
-                    <p id="p5"><input type="text" id="qte"name="ouss" onchange="oussama()"></p>
-                    <p id="p6" class="p7" id="total" value="3" name="ouss">$30.00</p>
+                    <p id="p4" class="p7">$29.00</p>
+                    <p id="p5"><input type="text"></p>
+                    <p id="p6" class="p7">$30.00</p>
 
                 </li>
                 <li>
@@ -262,19 +262,6 @@
             <p>Copyright ©2021 All rights reserved | This template is made with by Neabuzz</p>
         </div>
     </footer>
-    <script>
-        function oussama(){
-            var p= document.getElementsByName('ouss');
-            var q= document.getElementById('qte');
-            var t= document.getElementById('total');
-            alert(p[0].innerText);
-            alert(p[1].value);
-            alert(p[2].innerText);
-            p[2].innerText=Number( p[0].innerText)*Number( p[1].value);
-           
-
-        }
-    </script>
 
 </body>
 
