@@ -11,21 +11,19 @@
 </head>
 
 <body>
+<?php session_start(); if(empty($_SESSION["id"]))
+    { header("location: login.php"); }?>
     <?php
-        include("cnx.php"); session_start();
+        include("cnx.php");$i=0;
         $dr=ExecuteReader($cnx,"select * from produits");
         if(isset($_POST["cmd"]))
         {
-            if(!empty($_POST["chec"])) 
-                {    echo("<script>alert('cmd');</script>");
-                    foreach($_POST["chec"] as $cheked)
-                    {   
-                        $id=$_SESSION["id"];$date=date('d-m-y');
-                        ExecuteNonQuery($cnx," insert into commande values('','$id','$date')");
-                         
-                    }
-                    
-                }
+            $ccc=$_POST['saad'];
+            if(!empty($ccc))
+            {
+                foreach($ccc as $cheked)
+                {   echo("<script>alert($cheked);</script>"); }
+            }
         }
         
     
@@ -49,13 +47,10 @@
                 <p>vegefoods</p>
             </div>
             <ul>
-                <li>home</li>
-                <li>shop</li>
-                <li>home</li>
-                <li>shop</li>
-                <li>home</li>
-                <li>shop</li>
-
+                
+                <li><a href="produit-forni.php">Shop </a></li>
+                <li><a href="commande-forni.php">My commande </a></li>
+                
             </ul>
         </nav>
     </header>
@@ -75,25 +70,22 @@
                     <p id="p5">quantite</p>
                     <p id="p6">total</p>
                 </li>
-                <?php while($xtr=$dr->fetch()){?>
+                <?php while($xtr=$dr->fetch()){ $i++;?>
                 <li>
-                    <p id="p1"><input type="checkbox" value="<?php echo($xtr['IdP']);?>" name="chec" id=""></p>
+
+                    <p id="p1"><input type="checkbox" name="saad[]" value="red"></p>
                     <p id="p2"><img src="<?php echo($xtr['Imagee']);?>" alt=""></p>
                     <div id="p3">
                         <h1><?php echo($xtr['Designation']);?></h1>
                         <span><?php echo($xtr['Descr']);?></span>
                     </div>
-                    <p  class="p7" id="pri" ><?php echo($xtr['PrixUnit']);?></p>
-                    <p id="p5" ><input type="text" id="qte" onchange="myFunction()"></p>
-                    <p  class="p7" id="tot"></p>
-                    <script> $tot=0;  
-                        function myFunction() {
-                            
-                        var Prix = Number(document.getElementById('pri').innerHTML);alert(prix);
-                        var element = Number(document.getElementById('qte').value);alert(element);
-                        var prd=prix*element;
-                        document.getElementById('tot').value=prd;
-                        }
+                    <p id="p4" class="p7"  name="<?php echo($i); ?>" ><?php echo($xtr['PrixUnit']);?></p>
+                    <p id="p5" ><input type="text" name="<?php echo($i); ?>" onchange="myFunction(<?php echo($i); ?>)"></p>
+                    <p  id="p6" class="p7" name="<?php echo($i); ?>">0</p>
+                    <script> function myFunction(x){
+                            var p= document.getElementsByName(x);
+                            p[2].innerText=Number( p[0].innerText)*Number( p[1].value);
+                            }
                     </script> 
                     
                     
