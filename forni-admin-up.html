@@ -12,8 +12,20 @@
 </head>
 
 <body id="bg3">
-
-
+    <?php
+    session_start();
+    include("cnx.php");$IP='';$prix='';$qte='';$desc='';$desi=''; $image='';
+    $dr=ExecuteReader($cnx,"select * from produits ");
+    if(isset($_GET["serch"]))
+        {
+            $_SESSION["desi"]=$_GET["desi"];
+            $desig=$_SESSION["desi"];
+            $dt=ExecuteReader($cnx,"select * from produits where IdP=$desig ");
+            while($inf1=$dt->fetch()){
+            $IP=$inf1["IdP"];$prix=$inf1["PrixUnit"];$qte=$inf1["Qte"];$desc=$inf1["Descr"];$desi=$inf1["Designation"];
+            }$dt->closeCursor();
+        }
+    ?>
     <div class="wrapper">
 
 
@@ -35,12 +47,13 @@
                     <label for="username">Username</label>
                     
                     <select name="" id="select-user" class="w-100"> 
-                        <option value=""></option>
-                        <option value="">oussama</option>
-                        <option value="">oussama</option>
-                        <option value="">oussama</option>
+                        <?php while($inf=$dr->fetch()){?>
+                            <option  value="<?php echo($inf["IdP"]); ?>" > 
+                                <?php echo($inf["Designation"]);?>
+                             </option>
+                        <?php }$dr->closeCursor();?>
                     </select>
-                    <button id="select-search"><i class="far fa-search"></i></button>
+                    <button id="select-search" name="serch"><i class="far fa-search"></i></button>
                     <span class="check-icon"></span>
                 </div>
 
